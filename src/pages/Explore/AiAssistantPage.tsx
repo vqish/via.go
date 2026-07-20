@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Bot, Send, Calendar, Compass, User, Zap, AlertTriangle, ArrowRight, Clipboard, Eye } from 'lucide-react';
-import { toast } from 'react-hot-toast';
+import { Bot, Send, User, Check } from 'lucide-react';
 import './AiAssistantPage.css';
 
 interface Message {

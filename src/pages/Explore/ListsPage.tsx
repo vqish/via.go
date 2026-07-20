@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { List, Plus, Search, MapPin, Users, Check, Trash2 } from 'lucide-react';
+import { List, Plus, Users, Trash2 } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import './ListsPage.css';
 

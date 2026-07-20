@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, ShieldAlert, Phone, ShieldCheck, Heart, Navigation, Eye } from 'lucide-react';
+import { Search, ShieldAlert, Phone, Heart, Navigation } from 'lucide-react';
 import { allCountries } from '../../data/countries';
 import { generateCountryDetails } from '../../data/travelDatabase';
 import './EmergencyHubPage.css';
@@ -8,7 +8,6 @@ export default function EmergencyHubPage() {
   const [query, setQuery] = useState('');
   const [selectedCountry, setSelectedCountry] = useState('jp');
 
-  const countryBasic = allCountries.find(c => c.id === selectedCountry) || allCountries[0];
   const country = generateCountryDetails(selectedCountry);
 
   const handleSearch = (e: React.FormEvent) => {

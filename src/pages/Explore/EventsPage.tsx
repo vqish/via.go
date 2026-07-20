@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Calendar, MapPin, Tag, Users } from 'lucide-react';
+import { Search, Calendar, MapPin } from 'lucide-react';
 import './EventsPage.css';
 
 interface LocalEvent {

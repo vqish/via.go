@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Star, MapPin, Coffee, Utensils, Award } from 'lucide-react';
+import { Search, Star, MapPin } from 'lucide-react';
 import './RestaurantDirectoryPage.css';
 
 interface Restaurant {

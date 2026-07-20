@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Train, Bus, Compass, Info, Check, ShieldAlert } from 'lucide-react';
+import { Search, Train, Info } from 'lucide-react';
 import './TransportHubPage.css';
 
 interface TransportItem {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, Plane, Clock, ShieldAlert, Check, Plus, AlertCircle } from 'lucide-react';
+import { Search, Plane, Check, Plus, AlertCircle } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import './FlightTrackerPage.css';
 

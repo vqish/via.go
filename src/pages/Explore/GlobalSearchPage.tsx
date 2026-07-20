@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Search, Globe, MapPin, Building, Utensils, Star, FileText } from 'lucide-react';
+import { Search, Globe, MapPin, Building, Utensils, Star } from 'lucide-react';
 import { allCountries } from '../../data/countries';
 import { getCountryCities, getCountryAttractions } from '../../data/travelDatabase';
 import './GlobalSearchPage.css';

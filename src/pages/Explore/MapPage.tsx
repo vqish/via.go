@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MapPin, Star, Sparkles, Check, Globe, RefreshCw } from 'lucide-react';
+import { MapPin, Check } from 'lucide-react';
 import { allCountries } from '../../data/countries';
 import { toast } from 'react-hot-toast';
 import './MapPage.css';

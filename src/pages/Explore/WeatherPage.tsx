@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Sun, CloudRain, Cloud, Wind, Droplets, Thermometer, ShieldAlert, Compass } from 'lucide-react';
+import { Search, Sun, Wind, Droplets, Thermometer, ShieldAlert } from 'lucide-react';
 import { allCountries } from '../../data/countries';
 import './WeatherPage.css';
 

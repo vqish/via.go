@@ -12,6 +12,19 @@ import ExplorePage from './pages/Explore/ExplorePage';
 import CountryPage from './pages/Explore/CountryPage';
 import TripsPage from './pages/Trips/TripsPage';
 import SettingsPage from './pages/Dashboard/SettingsPage';
+import MapPage from './pages/Explore/MapPage';
+import ListsPage from './pages/Explore/ListsPage';
+import NotificationPage from './pages/Dashboard/NotificationPage';
+import GlobalSearchPage from './pages/Explore/GlobalSearchPage';
+import AiAssistantPage from './pages/Explore/AiAssistantPage';
+import WeatherPage from './pages/Explore/WeatherPage';
+import CurrencyPage from './pages/Explore/CurrencyPage';
+import FlightTrackerPage from './pages/Explore/FlightTrackerPage';
+import HotelDiscoveryPage from './pages/Explore/HotelDiscoveryPage';
+import RestaurantDirectoryPage from './pages/Explore/RestaurantDirectoryPage';
+import EventsPage from './pages/Explore/EventsPage';
+import TransportHubPage from './pages/Explore/TransportHubPage';
+import EmergencyHubPage from './pages/Explore/EmergencyHubPage';
 import { Toaster } from 'react-hot-toast';
 
 // Simple Premium Placeholder Component for pages under construction
@@ -47,17 +60,27 @@ function App() {
                 <Route path="/explore" element={<ExplorePage />} />
                 <Route path="/explore/country/:id" element={<CountryPage />} />
                 <Route path="/trips" element={<TripsPage />} />
-                <Route path="/maps" element={<PlaceholderPage title="Interactive World Map" icon="🗺️" />} />
-                <Route path="/lists" element={<PlaceholderPage title="Custom Travel Lists" icon="⭐" />} />
+                <Route path="/maps" element={<MapPage />} />
+                <Route path="/lists" element={<ListsPage />} />
                 <Route path="/budget" element={<PlaceholderPage title="Budget & Expense Tracker" icon="💰" />} />
                 <Route path="/journal" element={<PlaceholderPage title="Travel Journal & Memories" icon="📓" />} />
                 <Route path="/packing" element={<PlaceholderPage title="Smart Packing Checklist" icon="Backpack" />} />
                 <Route path="/notes" element={<PlaceholderPage title="Rich Text Travel Notes" icon="📝" />} />
                 <Route path="/documents" element={<PlaceholderPage title="Secure Document Vault" icon="🔒" />} />
-                <Route path="/scratch-map" element={<PlaceholderPage title="Travel Scratch Map" icon="🗺️" />} />
+                <Route path="/scratch-map" element={<MapPage />} />
                 <Route path="/profile" element={<PlaceholderPage title="User Profile & Stats" icon="👤" />} />
                 <Route path="/settings" element={<SettingsPage />} />
-                <Route path="/notifications" element={<PlaceholderPage title="Travel Notifications" icon="🔔" />} />
+                <Route path="/notifications" element={<NotificationPage />} />
+                <Route path="/search" element={<GlobalSearchPage />} />
+                <Route path="/via" element={<AiAssistantPage />} />
+                <Route path="/weather" element={<WeatherPage />} />
+                <Route path="/currency" element={<CurrencyPage />} />
+                <Route path="/flights" element={<FlightTrackerPage />} />
+                <Route path="/hotels" element={<HotelDiscoveryPage />} />
+                <Route path="/restaurants" element={<RestaurantDirectoryPage />} />
+                <Route path="/events" element={<EventsPage />} />
+                <Route path="/transport" element={<TransportHubPage />} />
+                <Route path="/emergency" element={<EmergencyHubPage />} />
                 <Route path="*" element={<PlaceholderPage title="Page Not Found" icon="🗺️" />} />
               </Routes>
             </main>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Star, MapPin, Building, Home, ShieldCheck, Compass } from 'lucide-react';
+import { Search, Star, MapPin } from 'lucide-react';
 import './HotelDiscoveryPage.css';
 
 interface Hotel {

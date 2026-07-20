@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Bell, ShieldAlert, Check, RefreshCw, Calendar, Trash2 } from 'lucide-react';
+import { Bell, Check, Trash2 } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import './NotificationPage.css';
 

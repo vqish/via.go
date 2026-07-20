@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DollarSign, ArrowLeftRight, TrendingUp, HelpCircle, RefreshCw } from 'lucide-react';
+import { ArrowLeftRight, TrendingUp } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import './CurrencyPage.css';
 
