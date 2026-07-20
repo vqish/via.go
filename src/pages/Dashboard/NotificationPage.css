@@ -1,0 +1,114 @@
+.notification-page {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-20);
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.notification-header h1 {
+  font-size: 2.25rem;
+  font-weight: 850;
+}
+
+.notifications-list-wrapper {
+  max-width: 800px;
+}
+
+.notification-item-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-xl);
+  transition: border-color var(--transition-fast);
+}
+
+.notification-item-card.unread-state {
+  border-left: 3px solid var(--brand-primary);
+}
+
+.notification-item-card.read-state {
+  opacity: 0.8;
+}
+
+.notification-card-inner {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.notification-icon-indicator {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notification-icon-indicator.trip { background: rgba(108, 99, 255, 0.1); color: var(--brand-primary); }
+.notification-icon-indicator.flight { background: rgba(250, 130, 49, 0.1); color: var(--brand-warm); }
+.notification-icon-indicator.visa { background: rgba(108, 99, 255, 0.1); color: var(--brand-primary); }
+.notification-icon-indicator.weather { background: rgba(250, 130, 49, 0.1); color: var(--brand-warm); }
+
+.notification-text-col {
+  flex: 1;
+}
+
+.notification-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.notification-title-row h4 {
+  font-size: 1.0625rem;
+  font-weight: 800;
+}
+
+.notification-actions-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.btn-text-action {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-weight: 700;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  padding: 0;
+}
+
+.btn-text-action:hover {
+  color: var(--text-primary);
+}
+
+.btn-text-action.delete-action:hover {
+  color: var(--brand-warm);
+}
+
+.dot-divider {
+  width: 4px;
+  height: 4px;
+  background: var(--border-default);
+  border-radius: var(--radius-full);
+}
+
+.empty-notifications-state {
+  padding: var(--space-12);
+  border-radius: var(--radius-xl);
+}
+
+.empty-notifications-state h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-top: var(--space-3);
+}

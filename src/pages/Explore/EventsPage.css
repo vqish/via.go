@@ -1,0 +1,132 @@
+.events-page {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-20);
+}
+
+.events-header {
+  margin-bottom: var(--space-6);
+}
+
+.events-header h1 {
+  font-size: 2.25rem;
+  font-weight: 850;
+}
+
+.events-search-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 8px 14px;
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  margin-top: var(--space-4);
+}
+
+.events-search-bar input {
+  flex: 1;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  outline: none;
+  font-size: 0.9375rem;
+}
+
+.events-filters {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.event-discovery-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card-image {
+  aspect-ratio: 16/10;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.event-category-badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  padding: 4px 10px;
+  background: rgba(0,0,0,0.6);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+.event-card-body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-2);
+}
+
+.event-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.event-title-row h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.event-cost-tag {
+  font-size: 0.75rem;
+  font-weight: 750;
+  color: var(--brand-primary);
+  background: rgba(108, 99, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.event-date, .event-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.event-desc {
+  margin: var(--space-2) 0;
+  line-height: 1.5;
+}
+
+.event-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-3);
+}
+
+@media (max-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}

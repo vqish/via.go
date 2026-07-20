@@ -1,0 +1,112 @@
+.global-search-page {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-20);
+}
+
+.search-header {
+  margin-bottom: var(--space-6);
+}
+
+.search-header h1 {
+  font-size: 2.25rem;
+  font-weight: 850;
+}
+
+.search-tabs-nav {
+  display: flex;
+  gap: var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--space-2);
+}
+
+.search-tab-btn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.search-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.search-tab-btn.active {
+  color: var(--brand-primary);
+}
+
+.search-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--brand-primary);
+}
+
+.search-results-list {
+  max-width: 800px;
+}
+
+.search-result-card {
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg);
+  display: block;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.search-result-card:hover {
+  transform: translateX(4px);
+  border-color: var(--brand-primary);
+}
+
+.result-card-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.result-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(108, 99, 255, 0.1);
+}
+
+.result-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-type-badge {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.result-info h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin: 2px 0;
+}
+
+.empty-search-state {
+  padding: var(--space-12);
+  border-radius: var(--radius-xl);
+}
+
+.empty-search-state h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-top: var(--space-3);
+}

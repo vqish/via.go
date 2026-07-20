@@ -1,0 +1,198 @@
+.map-page {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-20);
+}
+
+.map-header {
+  margin-bottom: var(--space-6);
+}
+
+.map-header h1 {
+  font-size: 2.25rem;
+  font-weight: 850;
+}
+
+.map-tabs {
+  display: flex;
+  gap: var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--space-2);
+}
+
+.map-tab-btn {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.map-tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.map-tab-btn.active {
+  color: var(--brand-primary);
+}
+
+.map-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--brand-primary);
+}
+
+.map-content {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: var(--space-6);
+  height: 600px;
+}
+
+.map-visual-panel {
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  height: 100%;
+}
+
+.scratch-progress-meter {
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 320px;
+}
+
+.progress-pct {
+  font-weight: 800;
+  font-size: 0.9375rem;
+  color: var(--brand-primary);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--brand-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease-out;
+}
+
+.map-controls-panel {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  height: 100%;
+  overflow: hidden;
+}
+
+.map-controls-panel h3 {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.scratch-search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  outline: none;
+  font-size: 0.875rem;
+}
+
+.scratch-search-input:focus {
+  border-color: var(--brand-primary);
+}
+
+.countries-scratch-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-right: 4px;
+}
+
+.scratch-country-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  width: 100%;
+}
+
+.scratch-country-item:hover {
+  background: var(--bg-card-hover);
+}
+
+.scratch-country-item.visited {
+  background: rgba(46, 213, 115, 0.1);
+  border-color: var(--brand-accent);
+}
+
+.scratch-country-item.visited .c-name {
+  color: var(--brand-accent);
+  font-weight: 700;
+}
+
+.c-flag {
+  font-size: 1.25rem;
+}
+
+.c-name {
+  flex: 1;
+  font-size: 0.875rem;
+}
+
+.c-check {
+  color: var(--brand-accent);
+}
+
+.pinned-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.pinned-item-card {
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 1024px) {
+  .map-content {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .map-visual-panel {
+    height: 400px;
+  }
+  
+  .map-controls-panel {
+    height: 500px;
+  }
+}

@@ -1,0 +1,671 @@
+.country-page {
+  padding-bottom: var(--space-20);
+}
+
+.country-hero {
+  position: relative;
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.country-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(10, 10, 15, 0.9) 100%);
+}
+
+.country-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: var(--space-8);
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: var(--space-6);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.back-btn:hover {
+  color: white;
+}
+
+.country-title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.country-flag-emoji {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.country-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 850;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.country-meta-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9375rem;
+  margin-top: 4px;
+}
+
+/* Tabs Nav */
+.country-tabs-nav {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: var(--navbar-height);
+  z-index: var(--z-dropdown);
+  backdrop-filter: var(--blur-md);
+}
+
+.tabs-inner {
+  display: flex;
+  gap: var(--space-1);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  padding: var(--space-4) var(--space-6);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+  font-family: var(--font-sans);
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  color: var(--brand-primary);
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: var(--space-6);
+  right: var(--space-6);
+  height: 2px;
+  background: var(--brand-primary);
+}
+
+/* Tab content layout */
+.tab-content-wrapper {
+  margin-top: var(--space-8);
+}
+
+.tab-pane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+/* Overview Layout */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-6);
+}
+
+.overview-main-info {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+}
+
+.overview-main-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: var(--space-3);
+}
+
+.key-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-5);
+}
+
+.detail-item span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  letter-spacing: 0.05em;
+}
+
+.detail-item p {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+
+.card-highlight {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+}
+
+.card-highlight h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.icon-brand { color: var(--brand-primary); }
+.icon-warm { color: var(--brand-warm); }
+.icon-success { color: var(--brand-accent); }
+.icon-primary { color: var(--brand-primary); }
+.icon-secondary { color: var(--brand-secondary); }
+
+/* Weather Section */
+.weather-section h3,
+.best-time-section h3,
+.itineraries-section h3,
+.food-section h3,
+.culture-section h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.weather-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: transform var(--transition-fast);
+}
+
+.weather-card:hover {
+  transform: translateY(-2px);
+}
+
+.weather-season {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.weather-temp {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--brand-primary);
+}
+
+/* Best Time Table */
+.best-time-card {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+}
+
+.best-time-table-grid {
+  display: grid;
+  grid-template-columns: 80px repeat(5, 1fr);
+  gap: var(--space-4);
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.table-header {
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.rating-stars-badge {
+  font-size: 1.25rem;
+  color: #f1c40f;
+}
+
+/* Itineraries cards */
+.itineraries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.itinerary-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: all var(--transition-fast);
+}
+
+.itinerary-card:hover {
+  border-color: var(--brand-primary);
+}
+
+.itinerary-days-badge {
+  background: rgba(108, 99, 255, 0.1);
+  color: var(--brand-primary);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.itinerary-card h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.itinerary-stops {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: auto;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-3);
+}
+
+.itinerary-stop-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+/* Food Guide Section */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.food-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: transform var(--transition-fast);
+}
+
+.food-card:hover {
+  transform: translateY(-2px);
+}
+
+.food-card h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.food-origin-tag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--brand-warm);
+  background: rgba(250, 130, 49, 0.1);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  width: fit-content;
+}
+
+.food-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-2);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.food-sub-sections {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.food-sub-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+}
+
+.food-sub-card h4 {
+  font-size: 0.9375rem;
+  font-weight: 750;
+  margin-bottom: var(--space-2);
+}
+
+.food-sub-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+/* Culture grid section */
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.culture-card {
+  padding: var(--space-5);
+  border-radius: var(--radius-xl);
+}
+
+.culture-card h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-bottom: var(--space-2);
+}
+
+/* Visa alert card */
+.visa-section {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+}
+
+.visa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.visa-badge-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.visa-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-4);
+  font-size: 0.875rem;
+}
+
+.visa-label {
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+/* Cities tab grid */
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.city-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast);
+}
+
+.city-card:hover {
+  transform: translateY(-2px);
+}
+
+.city-image {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.city-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city-body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-2);
+}
+
+.city-body h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: var(--space-1);
+}
+
+.city-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-2);
+}
+
+.city-tags {
+  margin-top: auto;
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  padding-top: var(--space-2);
+}
+
+.tag-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--brand-primary);
+}
+
+/* Attractions tab grid */
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.attraction-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast);
+}
+
+.attraction-card:hover {
+  transform: translateY(-2px);
+}
+
+.attraction-image {
+  aspect-ratio: 16/10;
+  position: relative;
+}
+
+.attraction-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.attraction-rating {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  padding: 4px 8px;
+  background: rgba(0,0,0,0.6);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  backdrop-filter: blur(4px);
+}
+
+.attraction-body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-2);
+}
+
+.attraction-body h3 {
+  font-size: 1.125rem;
+  font-weight: 750;
+}
+
+.attraction-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+/* Info tab styling */
+.info-tab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.etiquette-card {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+}
+
+.etiquette-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+}
+
+.etiquette-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.etiquette-card li {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: var(--space-5);
+}
+
+.etiquette-card li::before {
+  content: '👉';
+  position: absolute;
+  left: 0;
+}
+
+.details-column {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.info-detail-row {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.info-detail-row h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .weather-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .itineraries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .food-sub-sections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cities-grid, .attractions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .info-tab-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .weather-grid, .itineraries-grid, .food-grid, .food-sub-sections, .culture-grid, .cities-grid, .attractions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .best-time-table-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: var(--space-2);
+  }
+}

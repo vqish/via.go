@@ -1,0 +1,156 @@
+.restaurant-directory-page {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-20);
+}
+
+.restaurant-header {
+  margin-bottom: var(--space-6);
+}
+
+.restaurant-header h1 {
+  font-size: 2.25rem;
+  font-weight: 850;
+}
+
+.restaurant-search-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 8px 14px;
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  margin-top: var(--space-4);
+}
+
+.restaurant-search-bar input {
+  flex: 1;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  outline: none;
+  font-size: 0.9375rem;
+}
+
+.restaurant-filters {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.restaurant-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-card-image {
+  aspect-ratio: 16/10;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.cuisine-badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  padding: 4px 10px;
+  background: rgba(0,0,0,0.6);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  backdrop-filter: blur(4px);
+}
+
+.restaurant-card-body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-2);
+}
+
+.restaurant-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurant-title-row h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.restaurant-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #f1c40f;
+}
+
+.restaurant-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.restaurant-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin: var(--space-2) 0;
+}
+
+.category-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+.diet-pill {
+  font-size: 0.6875rem;
+  background: rgba(46, 213, 115, 0.1);
+  border: 1px solid var(--brand-accent);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  color: var(--brand-accent);
+}
+
+.restaurant-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-3);
+}
+
+.restaurant-price {
+  font-weight: 800;
+  font-size: 1.125rem;
+  color: var(--brand-primary);
+}
+
+@media (max-width: 1024px) {
+  .restaurants-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .restaurants-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,186 @@
+.currency-page {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-20);
+}
+
+.currency-header {
+  margin-bottom: var(--space-6);
+}
+
+.currency-header h1 {
+  font-size: 2.25rem;
+  font-weight: 850;
+}
+
+.currency-dashboard {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: var(--space-6);
+}
+
+.converter-panel, .chart-panel {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+}
+
+.converter-panel h3, .chart-panel h3, .rates-table-section h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.converter-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.input-group, .select-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.input-group label, .select-col label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.currency-input-wrap {
+  display: flex;
+  align-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.currency-symbol-addon {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-weight: 700;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.currency-input-wrap input {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: var(--space-3);
+  color: var(--text-primary);
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.currency-select-group {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+}
+
+.currency-select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-default);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-weight: 600;
+  outline: none;
+}
+
+.swap-btn-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.swap-btn-icon:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.converter-result-box {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.conversion-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.result-text {
+  font-size: 2rem;
+  font-weight: 850;
+  color: var(--brand-primary);
+}
+
+.chart-header-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.chart-wrapper {
+  margin-top: var(--space-4);
+  padding: var(--space-2);
+}
+
+.rates-table-section {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+}
+
+.rates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-4);
+}
+
+.rate-table-card {
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.rate-card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.rate-code {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.rate-val {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--brand-primary);
+}
+
+@media (max-width: 1024px) {
+  .currency-dashboard {
+    grid-template-columns: 1fr;
+  }
+}

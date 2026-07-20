@@ -1,0 +1,122 @@
+.emergency-hub-page {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-20);
+}
+
+.emergency-header {
+  margin-bottom: var(--space-6);
+}
+
+.emergency-header h1 {
+  font-size: 2.25rem;
+  font-weight: 850;
+}
+
+.emergency-search-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 8px 14px;
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  margin-top: var(--space-4);
+}
+
+.emergency-search-bar input {
+  flex: 1;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  outline: none;
+  font-size: 0.9375rem;
+}
+
+.emergency-dashboard {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: var(--space-6);
+}
+
+.emergency-contacts-panel, .facilities-panel {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+}
+
+.contacts-header-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.contacts-header-row h3, .facilities-panel h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.emergency-numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.emergency-number-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+}
+
+.emergency-number-card span {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.emergency-number-card p {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.emergency-notes-box {
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+}
+
+.emergency-notes-box h4 {
+  font-size: 0.9375rem;
+  font-weight: 800;
+}
+
+.facilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.facility-item-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+}
+
+.facility-item-card h4 {
+  font-size: 0.9375rem;
+  font-weight: 800;
+}
+
+@media (max-width: 1024px) {
+  .emergency-dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .emergency-numbers-grid {
+    grid-template-columns: 1fr;
+  }
+}
